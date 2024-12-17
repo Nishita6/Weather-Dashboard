@@ -1,0 +1,53 @@
+.sidebarlink {
+
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 200;
+
+}
+
+.sidebar {
+  position: fixed;
+  top: -10px;
+  left: -25px;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: white;
+}
+
+
+.sidebartext {
+  color: rgb(33, 37, 41);
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.sidebartext:hover{
+  cursor: pointer;
+}
+
+
+/*--to display sidbar -->*/
+.sidebar.hb {  
+  display: block;
+  z-index: 200;
+}
+
+.searchbarnav::placeholder {
+  text-align: center;
+}
+
+.searchbarnav {
+  background-color: rgb(241, 240, 240);
+  color: black;
+  border-width: 1px;
+  border-radius: 3px;
+  font-weight: 600;
+}

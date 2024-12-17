@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/video.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/general.css">
+</head>
+<body>
+
+  <div class="ms" style="margin-top: 0px;
+  margin-bottom: 40px;"
+  >
+    <input class="searchbar" type="text" placeholder="Search with location">
+    <button class="search-bar">
+      <img class="searchimage" src="headerimage/search.svg">
+      <div class="tooltip">Search</div>
+
+    </button>
+    
+  </div>
+
+  <div class="video-preview-grid">
+    <div class="section1">
+      <div class="presentweather">
+        <div class="us">
+          <div class="currentweather">Current Weather</div>
+         
+          <div class="time"></div>
+        </div>
+
+        <div class="ms">
+          <img class="weathericon" src="headerimage/hamburger-menu.svg">
+          <div class="temperature">
+            <p id="temp"></p>
+          </div>
+          <div class="weathertype"></div>
+        </div>
+
+        <div class="ds">
+          <div class="weatherdescription"> </div>
+        </div>
+
+        <button class="changeunit">°F</button>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="section2">
+      <div class="gridcontainer">
+        <div class="detail1">
+          <div class="weatherforecast">
+            <div class="details">
+              <div>Heat Index</div>
+
+            </div>
+            <div class="info">
+              <p id="heatindex"></p>
+            </div>
+
+          </div>
+
+          <div class="weatherforecast">
+            <div class="details">
+              <div>Wind</div>
+
+            </div>
+            <div class="info">
+              <p id="wind"></p>
+            </div>
+
+          </div>
+          </div>
+
+    <div class="detail2">
+
+            <div class="weatherforecast">
+              <div class="details">
+                <div>Humidity</div>
+
+              </div>
+              <div class="info">
+                <p id="humidity"></p>
+              </div>
+
+            </div>
+          
+
+
+          <div class="weatherforecast">
+            <div class="details">
+              <div>Visibility</div>
+
+            </div>
+            <div class="info">
+              <p id="visibility"></p>
+            </div>
+
+          </div>
+        </div>
+      
+
+      <div class="detail3">
+
+        <div class="weatherforecast">
+          <div class="details">
+            <div >Pressure</div>
+
+          </div>
+          <div class="info">
+            <p id="UV-index"></p>
+          </div>
+
+        </div>
+
+        <div class="weatherforecast">
+          <div class="details">
+            <div>UV-index</div>
+
+          </div>
+          <div class="info">
+            <p id="pressure"></p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section3">
+    <div class="presentweather">
+      <div class="us">
+        <p class="Summary">Sun Moon Summary</p>
+        <div class="sun-moon">
+          <div class="sun"><p class="text">Sun</p>
+            <div class="Sun-rise"></div>
+            <div class="Sun-set"></div>
+          </div>
+          <div class="moon"><p class="text">Moon</p>
+            <div class="Moon-rise"></div>
+            <div class="Moon-set"></div>
+          </div>
+
+        </div>
+        
+        
+  <script src="script3.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>

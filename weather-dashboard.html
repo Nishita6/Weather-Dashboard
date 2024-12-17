@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Weather Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/video.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="ls">
+      <img class="hb" src="headerimage/hamburger-menu.svg">
+      <div class="logo">Weather Forecast</div>
+    </div>
+
+    <div class="ms">
+      <input class="searchbar" type="text" placeholder="Search with location">
+      <button class="search-bar">
+        <img class="searchimage" src="headerimage/search.svg">
+      </button>
+    </div>
+
+    <div class="rs">
+      <div class="setting" style="width: 100%; height: 100%; display: block; fill: currentcolor;">
+        <svg class="setting" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24"
+          width="24" focusable="false" aria-hidden="true"
+          style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+          <path class="setting" clip-rule="evenodd"
+            d="m14.302 6.457-.668-.278L12.87 3.5h-1.737l-.766 2.68-.668.277c-.482.2-.934.463-1.344.778l-.575.44-2.706-.677-.868 1.504 1.938 2.003-.093.716c-.033.255-.05.514-.05.779 0 .264.017.524.05.779l.093.716-1.938 2.003.868 1.504 2.706-.677.575.44c.41.315.862.577 1.344.778l.668.278.766 2.679h1.737l.765-2.68.668-.277c.483-.2.934-.463 1.345-.778l.574-.44 2.706.677.869-1.504-1.938-2.003.092-.716c.033-.255.05-.514.05-.779 0-.264-.017-.524-.05-.779l-.092-.716 1.938-2.003-.869-1.504-2.706.677-.574-.44c-.41-.315-.862-.577-1.345-.778Zm4.436.214Zm-3.86-1.6-.67-2.346c-.123-.429-.516-.725-.962-.725h-2.492c-.446 0-.838.296-.961.725l-.67 2.347c-.605.251-1.17.58-1.682.972l-2.37-.593c-.433-.108-.885.084-1.108.47L2.717 8.08c-.223.386-.163.874.147 1.195l1.698 1.755c-.04.318-.062.642-.062.971 0 .329.021.653.062.97l-1.698 1.756c-.31.32-.37.809-.147 1.195l1.246 2.158c.223.386.675.578 1.109.47l2.369-.593c.512.393 1.077.72 1.681.972l.67 2.347c.124.429.516.725.962.725h2.492c.446 0 .839-.296.961-.725l.67-2.347c.605-.251 1.17-.58 1.682-.972l2.37.593c.433.108.885-.084 1.109-.47l1.245-2.158c.223-.386.163-.874-.147-1.195l-1.698-1.755c.04-.318.062-.642.062-.971 0-.329-.021-.653-.062-.97l1.698-1.756c.31-.32.37-.809.147-1.195L20.038 5.92c-.224-.386-.676-.578-1.11-.47l-2.369.593c-.512-.393-1.077-.72-1.681-.972ZM15.5 12c0 1.933-1.567 3.5-3.5 3.5S8.5 13.933 8.5 12s1.567-3.5 3.5-3.5 3.5 1.567 3.5 3.5ZM14 12c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2Z"
+            fill-rule="evenodd"></path>
+        </svg>
+      </div>
+      <div class="notificationiconcontainer">
+        <img class="notificationsicon" src="headerimage/notifications.svg">
+      </div>
+    </div>
+
+  </div>
+<div class="sidebar">
+    <div class="sidebarlink">
+      <input class="searchbarnav" type="text" placeholder="Search Location">
+    </div>
+    <div class="sidebarlink">
+      <button class="sidebartext " onclick="location.href='dashboard.html';">Dashboard</button>
+    </div>
+    <div class="sidebarlink">
+      <button class="sidebartext " onclick="location.href='about.html';"> About us</button>
+    </div>
+    <div class="sidebarlink">
+      <button class="sidebartext" id="SocialMedia">Social Media</button>
+    </div>
+    <div class="sidebarlink">
+      <button class="sidebartext" id="tc">Terms and Conditions</button>
+    </div>
+</div >
+  </div>
+</div>
+
+  <div class="weather-preview-grid">
+    <div class="section1">
+      <div class="presentweather">
+        <div class="us">
+          <div class="currentweather">Current Weather</div>
+          <div class="time"></div>
+        </div>
+
+        <div class="ms">
+          <img class="weathericon" src="">
+          <div class="temperature">
+            <p id="temp"></p>
+          </div>
+          <div class="weathertype"></div>
+        </div>
+
+        <div class="ds">
+          <div class="weatherdescription"> </div>
+        </div>
+        <button class="changeunit">°F</button>
+      </div>
+    </div>
+
+    <div class="section2">
+      <div class="gridcontainer">
+        <div class="detail1">
+          <div class="weatherforecast">
+            <div class="details">
+              <div>Heat Index</div>
+            </div>
+            <div class="info">
+              <p id="heatindex"></p>
+            </div>
+          </div>
+          <div class="weatherforecast">
+            <div class="details">
+              <div>Wind</div>
+            </div>
+            <div class="info">
+              <p id="wind"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail2">
+          <div class="weatherforecast">
+            <div class="details">
+              <div>Humidity</div>
+            </div>
+            <div class="info">
+              <p id="humidity"></p>
+            </div>
+          </div>
+          <div class="weatherforecast">
+            <div class="details">
+              <div>Visibility</div>
+            </div>
+            <div class="info">
+              <p id="visibility"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail3">
+          <div class="weatherforecast">
+            <div class="details">
+              <div>Pressure</div>
+            </div>
+            <div class="info">
+              <p id="UV-index"></p>
+            </div>
+          </div>
+          <div class="weatherforecast">
+            <div class="details">
+              <div>UV-index</div>
+            </div>
+            <div class="info">
+              <p id="pressure"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section3">
+      <div class="presentweather">
+        <div class="us">
+          <p class="Summary">Sun Moon Summary</p>
+          <div class="sun-moon">
+            <div class="sun">
+              <p class="text">Sun</p>
+              <div class="Sun-rise"></div>
+              <div class="Sun-set"></div>
+            </div>
+            <div class="moon">
+              <p class="text">Moon</p>
+              <div class="Moon-rise"></div>
+              <div class="Moon-set"></div>
+            </div>
+          </div>
+
+
+ <div class="footer">
+            <p class="textsocial">
+              Follow us on Social Media</p>
+            <div class="socialmedia">
+              <div><a href="https://www.instagram.com/">Instagram </a></div>
+              <div><a href="https://github.com/Nishita6">Git Hub </a></div>
+              <div><a
+                  href="https://www.facebook.com/?gad_source=1&gclid=Cj0KCQiAvP-6BhDyARIsAJ3uv7ZCFTFUVPhUVmtGyjn9p2lf_FqnYi6IFNvHdIK6GbuIm1rXdoUg_KYaAhv3EALw_wcB">Facebook</a>
+              </div>
+            </div>
+            <p class="terms"><a href="https://www.termsfeed.com/live/a47a40ba-de72-4b9e-811b-17a737dc98bf"
+                class="link">Terms and Conditions</a> </p>
+          </div>
+        </div>
+        <button class="top">^</button>
+
+          <script src="api.js"></script>
+          <script src="script.js"></script>
+
+</body>
+
+</html>

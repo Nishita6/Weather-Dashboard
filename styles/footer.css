@@ -1,0 +1,47 @@
+.footer{
+  width: 100vw; /* Full width of the viewport */
+  position: absolute; 
+  bottom: -300px;
+  left: 0;
+  background-color: white; 
+  z-index: 1; 
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+}
+
+.socialmedia{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 12px;
+  margin-left: 12px;
+
+}
+
+
+.terms{
+  margin-top: 40px;
+}
+
+.textsocial ,.terms{
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 12px;
+  
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+}
+
+.top{
+  width: 20px;
+  height: 20px;
+  margin-top: 244px;
+  z-index: 100;
+  margin-left: 20vw;
+}
