@@ -119,5 +119,17 @@ const location = event.target.value.trim();
 } 
 });
 
+document.querySelector('.search-bar').addEventListener('click', function () {
+  const location = document.querySelector('.searchbar').value.trim();
+  //this means it retrieves value written in searchbar
+  // trim() remves any leading space from the value entered
+  if (location) {
+      fetchWeatherData(location); // Fetch data for the entered location
+  } else {
+      alert('Please enter a valid location.');
+  }
+});
+
+
 // Default fetch when the page loads
 fetchWeatherData('Jaipur'); 
