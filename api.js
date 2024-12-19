@@ -19,6 +19,8 @@ async function fetchWeatherData(location) {
         let data = await response.json();
         console.log('Weather Data:', data); // 
 
+        let time = data.location.localtime;
+        let hour = parseInt(time.split(' ')[1].split(':')[0],10);
         const searchbtn = document.querySelector(".search-bar")
         const temp = data.current.temp_c;
         const condition = data.current.condition.text;
@@ -42,7 +44,20 @@ async function fetchWeatherData(location) {
         document.querySelector('.weathertype').textContent = condition;
         document.querySelector('.weatherdescription').textContent = `According to today's weather forecast weather will be  ${condition}`;
 
+        //color change according to time
+        if(hour>=12 && hour<16){
+          document.querySelector('body').style.backgroundColor="orange";
+        }
+        else if(hour>=16 && hour<24){
+          document.querySelector('body').style.backgroundColor="blue";
+
+        }
+        else if(hour>=0 && hour<4){
+          document.querySelector('body').style.backgroundColor="black";
+        }
         
+        
+
         button.addEventListener('click',function(){
 
           isCelsius=!isCelsius;

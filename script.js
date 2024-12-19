@@ -61,4 +61,6 @@ sidebarButtons.forEach(button => {
   button.addEventListener('click', closeSidebar);
 });
 
+let time = document.querySelector(".time");
+
 
