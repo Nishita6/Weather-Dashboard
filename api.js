@@ -5,7 +5,7 @@ let baseUrl = 'https://api.weatherapi.com/v1/current.json';
 // Function to fetch weather data
 async function fetchWeatherData(location) {
     try {
-        // Construct the API URL with location and API key
+        
         let url = `${baseUrl}?key=${apiKey}&q=${location}`;
         console.log(`Fetching weather data from: ${url}`); 
         
@@ -13,6 +13,10 @@ async function fetchWeatherData(location) {
         let response = await fetch(url);
         
         if (!response.ok) {
+
+          if(response.status === 400){
+            throw new Error("Invalid Location. Please enter a valid Locaion")
+          }
             throw new Error(`API Error: ${response.statusText}`);
         }
         
@@ -21,7 +25,7 @@ async function fetchWeatherData(location) {
 
         let time = data.location.localtime;
         let hour = parseInt(time.split(' ')[1].split(':')[0],10);
-        const searchbtn = document.querySelector(".search-bar")
+        const searchbtn = document.querySelector(".search-bar");
         const temp = data.current.temp_c;
         const condition = data.current.condition.text;
         const temp_f = 32 + (9/5 ) * temp  ;
@@ -79,10 +83,10 @@ async function fetchWeatherData(location) {
 
     } catch (error) {
         console.error('Error fetching weather data:', error);
-        alert('Could not fetch weather data. Please check the console for more details.');
+        alert(error.message);
     }
 
-    baseUrl = 'https://api.weatherapi.com/v1/forecast.json';
+         baseUrl = 'https://api.weatherapi.com/v1/forecast.json';
          url = `${baseUrl}?key=${apiKey}&q=${location}`;
           response = await fetch(url);
           data = await response.json();
@@ -102,6 +106,17 @@ document.querySelector('.searchbar').addEventListener('keypress', function (even
             alert('Please enter a valid location.');
         }
     } 
+});
+
+document.querySelector('.searchbarnav').addEventListener('keypress', function (event) {
+  if(event.key == 'Enter'){
+const location = event.target.value.trim();
+  if (location) {
+      fetchWeatherData(location); // Fetch data for the entered location
+  } else {
+      alert('Please enter a valid location.');
+  }
+} 
 });
 
 // Default fetch when the page loads

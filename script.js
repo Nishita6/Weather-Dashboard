@@ -64,3 +64,13 @@ sidebarButtons.forEach(button => {
 let time = document.querySelector(".time");
 
 
+document.querySelector('.searchbarnav').addEventListener('keypress', function (event) {
+  if(event.key == 'Enter'){
+  const location = event.target.value.trim();
+  if (location) {
+     closeSidebar(); 
+  } else {
+      alert('Please enter a valid location.');
+  }
+} 
+});
