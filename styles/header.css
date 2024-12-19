@@ -20,11 +20,16 @@
   align-items: center;
 }
 
+.menu{
+  height: 40px;
+  width: 60px;
+  margin-left: 4px;
+}
 .hb {
   height: 24px;
-  margin-left: 24px;
+  margin-left: 10px;
   margin-right: 20px;
-  margin-top: 15px;
+  margin-top: 5px;
   z-index: 500;
 }
 
@@ -124,7 +129,7 @@
 .logo {
   position: absolute;
   LEFT: 70px;
-  top: 24PX;
+  top: 18PX;
   bottom: 0;
   font-size: 17PX;
   white-space: nowrap;
