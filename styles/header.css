@@ -25,6 +25,12 @@
   width: 60px;
   margin-left: 4px;
 }
+
+.menu:hover{
+   cursor: pointer;
+
+}
+
 .hb {
   height: 24px;
   margin-left: 10px;
